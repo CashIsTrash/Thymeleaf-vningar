@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link rel="stylesheet" type="text/css" href="css/css.css">
+</head>
+<body>
+<ul id="nav">
+    <li class="nav-li"><a th:href="@{index}">Index</a></li>
+    <li class="nav-li"><a th:href="@{contact}">Contact</a></li>
+    <li class="nav-li"><a th:href="@{contact-list}">Contact List</a></li>
+    <li class="nav-li"><a th:href="@{about}">About</a></li>
+    <li class="nav-li"><a th:href="@{fever-start}">Check Fever</a></li>
+</ul>
+<h1>CHECK FEVER</h1>
+<form th:action="@{fever-check}" method="post">
+    <input type="text" id="temperature" name="temperature" placeholder="Enter your temperature">
+    <button type="submit">Submit</button>
+</form>
+</body>
+</html>
